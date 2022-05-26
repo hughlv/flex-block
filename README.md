@@ -2,6 +2,8 @@
 
 低代码物料：弹性布局容器，封装 @alifd/next 中的 ResponsiveGrid。
 
+资产包查看路径：https://unpkg.com/flex-block@0.2.0/build/lowcode/assets-prod.json
+
 ## 调试
 启动调试
 

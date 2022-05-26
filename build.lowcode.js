@@ -4,7 +4,7 @@ const { name, version } = require("./package.json");
 const baseRenderUrl =
   process && process.argv && process.argv.includes("start")
     ? "."
-    : `https://alifd.alicdn.com/npm/${name}@${version}`;
+    : `https://unpkg.com/${name}@${version}`;
 
 module.exports = {
   alias: {

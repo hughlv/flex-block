@@ -1,3 +1,3 @@
-const bizCssPrefix = 'bizpack';
+const bizCssPrefix = 'tx';
 
 export { bizCssPrefix };

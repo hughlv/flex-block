@@ -48,12 +48,13 @@ const FlexBlockMeta: ComponentMetadata = {
         name: 'layout',
         title: '布局',
         description: 'x:y:z:h',
-        defaultValue: '6:6',
+        defaultValue: '2:2:8',
         setter: {
           componentName: 'StringSetter',
         },
         extraProps: {
           setValue(target, value) {
+            console.log('setValue to target:', target, value);
             // 解析x:y:z的数据形式,排除不符合规范的传入
             let arrValue = value.split(':');
             arrValue = arrValue.filter((item) => {
@@ -65,7 +66,7 @@ const FlexBlockMeta: ComponentMetadata = {
             if (flag) {
               return;
             }
-            const { node } = target;
+            const node = target.getNode();
             node.children.mergeChildren(
               (child, index) => {
                 child.setPropValue('colSpan', arrValue[index]);
@@ -76,9 +77,10 @@ const FlexBlockMeta: ComponentMetadata = {
                 const items = [];
                 while (l++ < arrValue.length) {
                   items.push({
-                    componentName: 'FlexBlockCell',
+                    componentName: 'ResponsiveGrid.Cell',
                     title: '单元格',
                     props: {
+                      device: node.device,
                       colSpan: arrValue[l - 1] || 1,
                     },
                   });
@@ -111,7 +113,7 @@ const FlexBlockMeta: ComponentMetadata = {
               {
                 componentName: 'NumberSetter',
                 isRequired: false,
-                initialValue: 0,
+                initialValue: 1,
               },
             ],
           },
@@ -166,11 +168,12 @@ const FlexBlockMeta: ComponentMetadata = {
 };
 const snippets: Snippet[] = [
   {
-    "title": "弹性布局(6:6)",
+    "title": "弹性布局(4:8)",
     "screenshot": "https://alifd.alicdn.com/fusion-cool/icons/icon-antd/1-1.png",
     "schema": {
       "componentName": "FlexBlock",
       "props": {
+        layout: '4:8',
       },
     }
   },

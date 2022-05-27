@@ -1,6 +1,6 @@
 {
   "name": "flex-block",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "flex-block",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -71,6 +71,6 @@
   },
   "componentConfig": {
     "isComponentLibrary": true,
-    "materialSchema": "https://unpkg.com/flex-block@0.2.0/build/lowcode/assets-prod.json"
+    "materialSchema": "https://alifd.alicdn.com/npm/flex-block@0.2.1/build/lowcode/assets-prod.json"
   }
 }

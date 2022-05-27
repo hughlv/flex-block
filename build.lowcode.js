@@ -69,7 +69,8 @@ module.exports = {
         categories: ["通用", "导航", "信息输入", "信息展示", "信息反馈"],
         engineScope: "@alilc",
         extraAssets: [
-          'https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.6/build/lowcode/assets-prod.json'
+          'https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.6/build/lowcode/assets-prod.json',
+          'https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.3/build/lowcode/assets-prod.json'
         ]
       },
     ],
